@@ -1,129 +1,96 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
-body{
+body {
   overflow: hidden;
-  font-family: 'Roboto', sans-serif;
-  height: 100vh;
+  font-family: "Roboto", sans-serif;
 }
-
-.container{
+.container {
   height: 300px;
   width: 500px;
+  display: block;
+  margin: 15% auto;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+.container,
+.btn {
   border-radius: 10px;
-  margin-top: 13%;
-  margin-left: 37%;
-  box-shadow: 0 5px 10px  rgba(0, 0, 0, 0.5);
-
 }
-
-.header{
-    background-color: #94B49F;
-    text-align: center;
-    height: 100px;
-    width: 500px;
-    border-top-left-radius:10px;
-    border-top-right-radius: 10px;
-    color: #ffff;
-    padding-top: 40px;
+.header,
+.btn {
+  background-color: #94b49f;
 }
-
-
-.info{
-  visibility: hidden;
+.header,
+.emoji-section,
+.giphy,
+.revert {
+  text-align: center;
+}
+.header {
+  height: 100px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  color: #ffff;
+  padding-top: 40px;
+}
+.info {
   font-size: 13px;
 }
-
-.emoji-section{
-  text-align: center;
+.emoji-section {
   padding: 60px;
   font-size: 2rem;
   padding-bottom: 0;
-  animation-duration:  1s;
+  animation-duration: 1s;
   animation-name: slidein;
 }
-
-.emoji{
+.emoji {
   cursor: pointer;
 }
-
-
+.giphy,
+.btn,
+.info {
+  visibility: hidden;
+}
+img {
+  height: 120px;
+  width: 120px;
+}
+.btn {
+  width: 130px;
+  height: 40px;
+  border: none;
+  color: #fff;
+  margin-bottom: 0;
+  margin-top: 20px;
+  font-size: 15px;
+}
 @keyframes slidein {
   from {
     margin-left: 100%;
     width: 300%;
   }
-
   75% {
     font-size: 300%;
     margin-left: 25%;
     width: 150%;
   }
-
   to {
     margin-left: 0%;
     width: 100%;
   }
 }
-
-
-.giphy{
-  text-align: center;
-    visibility: hidden;
-}
-
-img{
-  height: 120px;
-  width: 120px;
-}
-
-.revert{
-  text-align: center;
-}
-
-.btn{
-  width: 130px;
-  height: 40px;
-  border: none;
-  border-radius: 10px;
-  background-color: #94B49F;
-  color: #fff;
-  margin-bottom: 0;
-  margin-top: 20px;
-  font-size: 15px;
-  visibility: hidden;
-}
-
-@media (max-width: 550px){
-  .container{
-    height: 280px;
-    width: 350px;
-    margin-top: 700px;
-    margin-left: 250px;
+@media only screen and (max-width: 425px) {
+  html,
+  body {
+    width: 100% !important;
+    overflow-x: hidden !important;
   }
-  .header{
-    height: 100px;
-    width: 350px;
-    padding-top: 30px;
-    font-size: 13px;
-  }
-  .emoji-section{
-    padding: 40px;
-  }
-  .btn{
-    margin-top: 10px;
-  }
-}
-
-@media (max-width: 1300px){
-  .container{
-    margin-top: 50%;
-    margin-left: 50%;
-    transform: translate(-50%, -50%);
+  .container {
+    width: 400px;
+    margin: 20% auto;
   }
 }
